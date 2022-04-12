@@ -1,0 +1,111 @@
+@import '../assets/variables';
+
+.buynow__container {
+    position: relative;
+    z-index: 4;
+    height: 600px;
+    margin-top: -15rem;
+
+
+    > img {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.buynow__blue-circle {
+    position: absolute;
+    background: url('../assets/images/blue-circle.png');
+    width: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    height: 601px;
+    background-position: top;
+}
+
+.buynow__clouds {
+    position: absolute;
+    background: url('../assets/images/metag/clouds.png');
+    width: 100%;
+    height: 670px;
+    background-position: top;
+    background-size: cover;
+    bottom: -6rem;
+    left: 0;
+    z-index: 1;
+
+    @media screen and (max-width: 1600px) {
+        bottom: -10rem;
+    }
+
+    @include media(sm) {
+        bottom: -5rem;
+        height: 370px;
+    }
+}
+
+.buynow__content {
+    position: relative;
+    top: 7rem;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    > h2 {
+        color: $color-white;
+        font-size: 76px;
+        text-align: center;
+    }
+
+    > p {
+        color: $color-white;
+        text-align: center;
+        margin-left: -0.1rem;
+        margin-bottom: 3rem;
+    }
+}
+
+.buynow__buttons {
+    display: flex;
+    gap: 1rem;
+
+    > a:nth-child(2) {
+        padding-left: 3rem;
+    }
+
+    > a {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-left: 3.7rem;
+        padding-right: 1.4rem;
+
+        > img {
+            position: absolute;
+            height: 40px;
+            left: 0.8rem;
+        }
+
+        > svg {
+            position: absolute;
+            height: 26px;
+            width: max-content;
+            left: 0.8rem; 
+        }
+    }
+}
+
+
+/*=================MEDIA sm=================*/
+
+@include media(sm) {
+    .buynow__buttons {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,28 @@
+$color-primary: #D95A81;
+$color-primary-variant: #b14163;
+$color-bg: #3ABEF9;
+$color-white: #fff;
+$color-black: #000;
+$transition: all 0.3s;
+$text-color: #64607D;
+
+@mixin media($size) {
+    @if $size == md {
+        @media screen and (max-width: 1080px) {
+            @content;
+        } 
+    } @else if $size == sm {
+        @media screen and (max-width: 750px) {
+            @content;
+        }
+    } @else if $size == vsm {
+        @media screen and (max-width: 300px) {
+            @content;
+        }
+    }
+    @else if $size == vmd {
+        @media screen and (max-width: 1350px) {
+            @content;
+        }
+    }
+}

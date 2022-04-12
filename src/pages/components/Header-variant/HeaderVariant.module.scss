@@ -1,0 +1,115 @@
+@import '../assets/variables';
+
+.header {
+    
+    &__container {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        justify-content: space-between;
+        height: 50px;
+        padding: 10px 153px 10px 126px;
+        background-color: $color-primary;
+
+        > h3 {
+            font-size: 16px;
+            font-weight: 500;
+            color: $color-white;
+            font-family: 'Inter';
+        }
+
+        &__nav {
+            display: flex;
+            margin-top: 35px;
+            
+            &__icon {
+                position: relative;
+                cursor: pointer;
+                width: 48.86px;
+                height: 48.86px;
+                border-radius: 50%;
+                background-color: $color-white;
+                border: 3.5px solid $color-primary;
+                margin-right: 13px;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+
+                > img {
+                    position: absolute;
+                }
+
+                &__twitter {
+                    left: 10px;
+                    top: 12px;
+                }
+                
+                &__telegram {
+                    left: 9px;
+                    top: 12px;
+                }
+
+                @include media(md) {
+                    height: 55px;
+                    width: 55px;
+                    margin-right: 6px;
+                    border-color: $color-primary-variant;
+
+                    &__twitter {
+                        left: 13px;
+                        top: 16px;
+                    }
+
+                    &__telegram {
+                        left: 11px;
+                        top: 15px;
+                    }
+            }
+            }
+
+            @include media(md) {
+                margin-top: 38px;
+            }
+
+            @include media (vsm) {
+                margin-top: 0;
+
+                &__icon {
+                    width: 40px;
+                    height: 40px;
+
+                    &__telegram {
+                        left: 4px;
+                        top: 7px;
+                    }
+                    &__twitter {
+                        left: 6px;
+                        top: 8px;
+                    }
+                }
+            }
+        }
+
+        @include media(md) {
+            height: 60px;
+            padding: 20px 50px;
+        }
+
+        @include media(sm) {
+            padding: 10px 3px 10px 20px;
+
+            > h3 {
+                font-size: 13px;
+            }
+        }
+
+        @include media(vsm) {
+            > h3 {
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+

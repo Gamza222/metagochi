@@ -1,0 +1,134 @@
+@import '../assets/variables';
+
+.roadmap__container {
+    position: relative;
+    z-index: 1;
+}
+
+.roadmap__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: -24rem;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1rem 13rem;
+
+    > p {
+        width: 40%;
+    }
+}
+
+.roadmap__ellipse {
+        z-index: -1;
+        position: absolute;
+        transform: translateY(-50%);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 870px;
+        background: url(../assets/images/section8/ellipse2.png);
+        background-size: cover;
+        background-position: center;
+    
+        @include media(sm) {
+            bottom: 23rem;
+        }
+}
+
+.phases {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.phase-item {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    border-radius: 30px;
+    background: #D3F1FD;
+    margin-top: 3rem;
+
+    > h3 {
+        margin-left: 1rem;
+    }
+}
+
+.phase-item__subject {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 0.2fr 1fr;
+    gap: 0.5rem;
+
+    > img {
+        min-width: 55px;
+        min-height: 55px;
+        max-height: 55px;
+        max-width: 55px;
+        align-self: start;
+    }
+
+    > p {
+        text-align: left;
+    }
+}
+
+
+/*====================MEDIA 1600px============================*/
+
+@media screen and (max-width: 1600px) {
+    .phases {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .phase-item:nth-child(3) {
+        grid-column: span 2;
+
+        .phase-item__subject {
+            grid-template-columns: 0.08fr 1fr;
+        }
+    }
+
+    .roadmap__content > p {
+        width: 70%;
+    }
+}
+
+/*====================MEDIA 1350px============================*/
+
+@media screen and (max-width: 1350px) {
+    .phases {
+        grid-template-columns: 1fr;
+    }
+    
+    .phase-item {
+        padding: 2rem 1rem;
+    }
+
+    .phase-item:nth-child(3) {
+        grid-column: span 1;
+    }
+
+    .phase-item__subject {
+        grid-template-columns: 0.08fr 1fr;
+    }
+
+    .roadmap__content > p {
+        width: 80%;
+    }
+}
+
+/*====================MEDIA md============================*/
+
+@include media(md) {
+    .roadmap__content {
+        padding: 1rem 2rem;
+    }
+
+    .roadmap__content > p {
+        width: 90%;
+    }
+}

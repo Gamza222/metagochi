@@ -1,0 +1,51 @@
+@import '../assets/variables';
+
+.section4__container  {
+    margin-bottom: 4rem;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 1rem 5rem 1rem 8rem;
+
+    > img {
+        z-index: -1;
+        margin-top: -2rem;
+
+        @media screen and (max-width: 1350px) {
+            margin-top: 0;
+        }
+    }
+}
+
+
+/*=========MEDIA md ==========*/
+
+@include media(md) {
+    .section4__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        > img {
+            position: absolute;
+            opacity: 0.1;
+        }
+    }
+}
+
+
+/*=========MEDIA sm ==========*/
+
+@include media(sm) {
+    .section4__container {
+        padding: 1rem 1.7rem;
+        
+
+        > div {
+            text-align: center;
+        }
+    }
+}
+

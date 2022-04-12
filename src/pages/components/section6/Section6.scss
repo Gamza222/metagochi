@@ -1,0 +1,45 @@
+
+@import '../assets/variables';
+
+.section6__container {
+    position: relative;
+    padding: 1rem 10rem 1rem 16rem;
+    margin-top: -5rem;
+    display: grid;
+    grid-template-columns: 0.9fr 1fr;
+    gap: 5rem;
+    align-items: center;
+    justify-items: center;
+
+    > article {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    @include media(md) {
+        grid-template-columns: 1fr;
+        text-align: center;
+        column-gap: 0;
+        row-gap: 2rem;
+        padding: 1rem 3rem;
+
+        > article {
+            grid-column: 2;
+            grid-row: 2;
+        }
+
+        &.team-pic {
+            grid-column: 1;
+            grid-row: 1;
+        }
+    }
+    @include media(sm) {
+        padding: 1rem 2rem;
+        margin-top: 4rem;
+    }
+
+}
+
+.team-pic {
+    grid-column: 2;
+}
