@@ -10,30 +10,30 @@ const steps = [
     name: 'MetaMask',
     url: MetaMask,
     stepNum: 'Step 1',
-    title: `Download the MetaMask Chrome Extension or mobile app.`,
-    text: `Setup your account & make sure you’re connected to the ethereum network.`
+    title: <h4>Download the <a href="https://metamask.io/">MetaMask Chrome Extension</a> or mobile app.</h4>,
+    text: <p>Setup your account & make sure you’re connected to the ethereum network.</p>
   },
   {
     name: 'Ethereum',
     url: Ethereum,
     stepNum: 'Step 2',
-    title: `Download the MetaMask Chrome Extension or mobile app.`,
-    text: `Setup your account & make sure you’re connected to the ethereum network.`
+    title: <h4>Use Coinbase / another exchange to purchase ETH and send it over to your MetaMask Wallet Address.</h4>,
+    text: <p>Or if you already have ETH, simply send it to your MetaMask Wallet.</p>
   },
   {
     name: 'Pony',
     url: Pony,
     stepNum: 'Step 3',
-    title: `Download the MetaMask Chrome Extension or mobile app.`,
-    text: `Setup your account & make sure you’re connected to the ethereum network.`
+    title: <h4>Head over to the Uniswap Exchange and swap your ETH for $MGCHI.</h4>,
+    text: <p>(if you already hold another token, you can swap that directly for $MGCHI too)</p>
   },
   {
     name: 'Telegram',
     url: Telegram,
     stepNum: 'Step 4',
-    title: `Download the MetaMask Chrome Extension or mobile app.`,
-    text: `Setup your account & make sure you’re connected to the ethereum network.`
-  },
+    title: <h4>Congratulations! You are now an Official MetaGochi Holder.</h4>,
+    text: <p><a href="https://t.me/metagochi">Join our Telegram</a> to stay up to date with the teams announcements & progress.</p>
+  },  
 ];
 
 export default function Section8() {
@@ -54,12 +54,14 @@ export default function Section8() {
                     return (
                       <div className="section8__steps-item" key={index}>
                         <img src={step.url} alt={step.name} />
-                        <div className="step-number">
-                          <h3>{step.stepNum}</h3>
-                        </div>
-                        <div className="step-text">
-                          <h4>{step.title}</h4>
-                          <p>{step.text}</p>
+                        <div className="section8__steps-item__description">
+                          <div className="step-number">
+                            <h3>{step.stepNum}</h3>
+                          </div>
+                          <div className="step-text">
+                            {step.title}
+                            {step.text}
+                          </div>
                         </div>
                       </div>
                     )

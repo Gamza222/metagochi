@@ -16,6 +16,17 @@
             font-weight: 500;
             color: $color-white;
             font-family: 'Inter';
+            margin: 0;
+            letter-spacing: 1px;
+
+            > a {
+                border: none;
+                text-decoration: none;
+                color: $color-white;
+                font-weight: 800;
+                font-style: italic;
+                cursor: pointer;
+            }
         }
 
         &__nav {

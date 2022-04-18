@@ -75,28 +75,31 @@
     display: flex;
     gap: 1rem;
 
-    > a:nth-child(2) {
-        padding-left: 3rem;
-    }
 
     > a {
         position: relative;
         display: flex;
+        height: 50px;
         align-items: center;
         padding-left: 3.7rem;
         padding-right: 1.4rem;
+        font-weight: 500;
+
+        @include media(sm) {
+            font-weight: 700;
+        }
 
         > img {
             position: absolute;
             height: 40px;
             left: 0.8rem;
         }
+    }
 
-        > svg {
-            position: absolute;
-            height: 26px;
-            width: max-content;
-            left: 0.8rem; 
+    > a:nth-child(2) {
+        > img {
+            height: 22px;
+            left: 1.2rem;
         }
     }
 }

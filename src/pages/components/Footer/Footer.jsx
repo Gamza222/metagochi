@@ -11,17 +11,17 @@ export default function Footer() {
         <div className="footer__container">
             <div className="footer__content">
                 <div className="footer__logo">
-                    <img src={Metagochi1} />
+                    <img src={Metagochi1} alt="metagochi" />
                     <div className="footer__logo-links">
-                        <a href="#"><img src={TelegramIcon} className="telegram-icon" /></a>
-                        <a href="#"><img src={TwitterIcon} className="twitter-icon"/></a>
+                        <a href="https://t.me/metagochi"><img src={TelegramIcon} className="telegram-icon" /></a>
+                        <a href="https://twitter.com/metagochi"><img src={TwitterIcon} className="twitter-icon"/></a>
                     </div>
                 </div>
                 <div className="footer__links">
-                    <a href="#">WHITEPAPER</a>
-                    <a href="#">CONTRACT</a>
-                    <a href="#">UNISWAP</a>
-                    <a href="#">CHART</a>
+                    <a href="https://ipfs-fast.b-cdn.net/metagochi/Metagochi_latest.pdf">WHITEPAPER</a>
+                    <a href="https://etherscan.io/address/0xc1a85faa09c7f7247899f155439c5488b43e8429#code">CONTRACT</a>
+                    <a href="https://app.uniswap.org/#/swap?outputCurrency=0xC1a85Faa09c7f7247899F155439c5488B43E8429">UNISWAP</a>
+                    <a href="https://www.dextools.io/app/ether/pair-explorer/0xC1a85Faa09c7f7247899F155439c5488B43E8429">CHART</a>
                 </div>
             </div>
             <div className="footer__text">

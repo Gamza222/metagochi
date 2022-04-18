@@ -14,7 +14,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 333px;
+    height: 500px;
     background: url(../assets/images/section8/clouds2.png);
     background-size: cover;
     background-position: center;
@@ -87,9 +87,9 @@
 }
 
 .step-number {
-    width: 50%;
+    width: 80%;
     height: 60px;
-    margin-bottom: 1rem;
+    margin-bottom: 1.3rem;
     margin-top: -2rem;
     display: flex;
     align-items: center;
@@ -104,17 +104,16 @@
     }
 }
 
+.section8__steps-item__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .step-text {
    width: 90%;
-    > h4 {
-        font-family: 'Inter';
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 28px;
-        color: $color-primary;
-    }
 
-    > p {
+    > h4 {
         font-family: 'Inter';
         font-style: normal;
         font-weight: 500;
@@ -122,6 +121,26 @@
         line-height: 30px;
         letter-spacing: -0.02em;
         color: $text-color;
+        margin-bottom: 1rem;
+
+        > a {
+            font-family: 'Inter';
+            font-weight: 800;
+            font-size: 16px;
+            line-height: 28px;
+            color: $color-primary;
+        }
+    }
+
+    > p {
+        text-align: center;
+        > a {
+            font-family: 'Inter';
+            font-weight: 800;
+            font-size: 16px;
+            line-height: 28px;
+            color: $color-primary;
+        }
     }
 }
 
@@ -161,16 +180,66 @@
 
     .section8__steps {
         grid-template-columns: 1fr;
-        row-gap: 0;
+        row-gap: 3rem;
+        padding: 2rem 0;
     }
 
     .section8__steps-item {
+        display: grid;
+        grid-template-columns: 0.5fr 1fr;
+
         > img {
-            height: 55%;
+            height: 108px;
         }
+    }
+    .section8__steps-item__description {
+        align-items: start;
     }
 
     .step-text {
-        width: 80%;
+        width: 100%;
+        text-align: left;
+        > h4 {
+            font-size: 13px;
+            margin-bottom: 0.8rem;
+
+            > a {
+                font-size: 13px;
+            }
+        }
+
+        > p {
+            font-size: 13px;
+            text-align: left;
+
+            > a {
+                font-size: 13px;
+            }
+        }
+    }
+
+    .step-number {
+        position: relative;
+        margin-top: 0;
+        margin-bottom: 0.8rem;
+        height: 40px;
+        background: transparent;
+        justify-content: start;
+
+        &:before {
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            background: $color-primary;
+            border-radius: 4px;
+            bottom: -3px;
+            left: 0;
+        }
+        
+        > h3 {
+            font-size: 28px;
+            margin-bottom: 0;
+        }
     }
 }

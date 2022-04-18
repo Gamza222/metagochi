@@ -17,6 +17,7 @@
 
     > p {
         width: 40%;
+        text-align: center;
     }
 }
 
@@ -48,9 +49,16 @@
     flex-direction: column;
     padding: 1.5rem;
     gap: 1.5rem;
+    border: 2px solid transparent;
     border-radius: 30px;
     background: #D3F1FD;
     margin-top: 3rem;
+    transition: $transition;
+
+    &:hover {
+        background: #feffff;
+        border-color: #D3F1FD;
+    }
 
     > h3 {
         margin-left: 1rem;
@@ -94,6 +102,7 @@
 
     .roadmap__content > p {
         width: 70%;
+        text-align: center;
     }
 }
 
@@ -129,6 +138,6 @@
     }
 
     .roadmap__content > p {
-        width: 90%;
+        width: 100%;
     }
 }

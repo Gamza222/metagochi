@@ -2,6 +2,10 @@
 @import '../assets/variables';
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Inter';
     color: $color-white;
@@ -68,7 +72,7 @@ body {
 
 
 article {
-
+    text-align: left;
     > h2 {
         font-family: 'Londrina Solid';
         color: $color-primary;
@@ -76,7 +80,11 @@ article {
         font-weight: 900;
         font-size: 50.0802px;
         line-height: 112%;
-        margin-bottom: 2.5rem;
+        margin-bottom: 2rem;
+
+        @include media(sm) {
+            margin-bottom: 1rem;
+        }
     }
 
     > div {
@@ -84,7 +92,7 @@ article {
         margin-bottom: 2rem;
         
         > p {
-            margin-bottom: 2.5rem;
+            margin-bottom: 2rem;
             font-family: 'Inter';
             font-style: normal;
             font-weight: 500;
@@ -92,6 +100,10 @@ article {
             line-height: 30px;
             letter-spacing: -0.02em;
             color: #64607D;
+
+            @include media(sm) {
+                margin-bottom: 1rem;
+            }
         }
     }
 
@@ -109,6 +121,12 @@ p {
     text-align: center;
     letter-spacing: -0.02em;
     color: $text-color;
+    text-align: left;
+
+    @include media(sm) {
+        text-align: left;
+        font-size: 14px;
+    }
 
     @include media(vsm) {
         font-size: 13px;
@@ -131,4 +149,8 @@ h3 {
     font-weight: 900;
     font-size: 40px;
     margin-bottom: 1rem;
+}
+
+h1, h2, h3, h4, h5 {
+    letter-spacing: 0.1rem;
 }

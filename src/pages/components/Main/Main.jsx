@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import * as classes from './Main.module.scss'
 import Metagochi1 from '../assets/images/metag/picture1.svg'
 import Metagochi2 from '../assets/images/metag/metagochi-title.png'
-import { IoMdPaperPlane } from 'react-icons/io'
+import Telegram from '../assets/images/telegr.svg'
 import VideoBg from '../assets/images/video/video-bg.png'
 import Clouds from '../assets/images/metag/clouds.png'
 import Meta1 from '../assets/images/metag/metag1.svg'
@@ -10,14 +10,15 @@ import Meta2 from '../assets/images/metag/metag2.svg'
 import Meta3 from '../assets/images/metag/metag4.svg'
 import { ImCross, ImMenu } from 'react-icons/im'
 
-import video from '../assets/images/video/picture2.png'
 
 
 
-export const Main = () => {
+
+export default function Main() {
 
     const [active, setActive] = useState(false);
     const [width, setWidth] = useState('');
+    const isBrowser = () => typeof window !== "undefined"
 
     useEffect(() => {
         if (width > 750) {
@@ -27,11 +28,11 @@ export const Main = () => {
 
     
     useEffect(()=> {
-        setWidth(window.innerWidth)
+        setWidth(isBrowser() && window.innerWidth)
     }, []);
 
-    window.addEventListener('resize', () => {
-        setWidth(window.innerWidth);
+    isBrowser() && window.addEventListener('resize', () => {
+        setWidth(isBrowser() && window.innerWidth);
     })
 
 
@@ -54,24 +55,25 @@ export const Main = () => {
                     style={active ? {maxHeight: '700px', opacity: '1'} : {maxHeight: '0', opacity: '0'}}
                 >
                     <ul className={classes.main__container__nav__links__list}>
-                        <li><a href="" key="WHITEPAPER">WHITEPAPER</a></li>
-                        <li><a href="" key="CONTRACT">CONTRACT</a></li>
-                        <li><a href="" key="UNISWAP">UNISWAP</a></li>
-                        <li><a href="" key="CHART">CHART</a></li>                       
+                        <li><a href="https://ipfs-fast.b-cdn.net/metagochi/Metagochi_latest.pdf" key="WHITEPAPER">WHITEPAPER</a></li>
+                        <li><a href="https://etherscan.io/address/0xc1a85faa09c7f7247899f155439c5488b43e8429#code" key="CONTRACT">CONTRACT</a></li>
+                        <li><a href="https://app.uniswap.org/#/swap?outputCurrency=0xC1a85Faa09c7f7247899F155439c5488B43E8429" key="UNISWAP">UNISWAP</a></li>
+                        <li><a href="https://www.dextools.io/app/ether/pair-explorer/0xC1a85Faa09c7f7247899F155439c5488B43E8429" key="CHART">CHART</a></li>                       
                     </ul>
-                    <a className='button' href="#">LAUNCH APP</a>  
+                    <a className='button' href="https://app.metagochi.com/">LAUNCH APP</a>  
                 </div>
             </nav>
 
             <div className={classes.main__container__info}>
-                <h1>Introducing the biggest virtual pet Metaverse platform</h1>
+                <h1>Introducing The Biggest Virtual Pet Metaverse Platform</h1>
                 <p>ON ERC-20 NETWORK</p>
-                <a href="#" className="button">
-                    <IoMdPaperPlane />
+                <a href="https://t.me/metagochi" className="button">
+                    <img src={Telegram} />
                     JOIN THE TELEGRAM
                 </a>
                 <div className={classes.main__container__info__video}>
                     <img src={VideoBg} alt="" />
+                    <video  src="https://metagochi.com/wp-content/uploads/2021/12/MetaGotchi-Promo-Video.mp4" controls conteolslist="nodownload" />
                 </div>
                 <div className={classes.main__container__info__clouds}>
                     <img src={Clouds} alt='clouds' />

@@ -200,12 +200,34 @@
             align-items: center;
             margin-top: 105px;
 
+            > a {
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+                margin-bottom: 1rem;
+                > svg {
+                    height: 25px;
+                    width: max-content;
+                }
+            }
+
             > p {
                 color:$color-white;
             }
 
             &__video {
                 z-index: 5;
+                position: relative;
+
+                > video {
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    width: 80%;
+                    transform: translate(-50%, 20%);
+                    border-radius: 20px;
+                    opacity: 0.9;
+                }
             }
 
             &__clouds {
@@ -229,6 +251,7 @@
                 font-weight: 900;
                 font-size: 70px;
                 line-height: 112%;
+                letter-spacing: 0.3rem;
             }
 
             > p {
@@ -289,7 +312,8 @@
                 margin-top: 20px;
 
                 > h1 {
-                    font-size: 43px;
+                    font-size: 35px;
+                    letter-spacing: 0.1rem;
                 }
             }
         }

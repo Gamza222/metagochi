@@ -1,6 +1,6 @@
 import * as React from "react"
 import BuyNow from "./components/BuyNow/BuyNow"
-import { Layout } from "./components/Layout/Layout"
+import Layout from "./components/Layout/Layout"
 import RoadMap from "./components/RoadMap/RoadMap"
 import Section3 from "./components/Section3/Section3"
 import Section4 from "./components/Section4/Section4"

@@ -74,6 +74,10 @@
 
         article {
             text-align: center;
+
+            @include media(sm) {
+                text-align: start;
+            }
         }
 
         > img {
