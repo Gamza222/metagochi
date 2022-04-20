@@ -60,7 +60,22 @@
         > a {
             > img {
                 height: 350px;
+                position: relative;
+                z-index: -1;
             }
+        }
+
+        > a:nth-child(1) {
+            position: relative;
+            z-index: 3;
+        }
+        > a:nth-child(2) {
+            position: relative;
+            z-index: 2;
+        }
+        > a:nth-child(3) {
+            position: relative;
+            z-index: 1;
         }
     }
 }
