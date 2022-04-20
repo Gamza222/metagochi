@@ -5,7 +5,7 @@ import sponsor1 from '../assets/images/sponsors/sponsor1.svg'
 import sponsor2 from '../assets/images/sponsors/sponsor2.svg'
 import sponsor3 from '../assets/images/sponsors/sponsor3.svg'
 import sponsor4 from '../assets/images/sponsors/sponsor4.svg'
-import Products from './products'
+import Products from './Products'
 
 const sponsors = [
     {

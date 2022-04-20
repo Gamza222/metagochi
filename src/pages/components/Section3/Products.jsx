@@ -13,12 +13,12 @@ const products = [
     {
         url: Product2,
         name: 'whitepaper',
-        link: 'https://metagochi.com/wp-content/uploads/2022/01/Metagochi-Whitepaper-V2.pdf'
+        link: 'https://ipfs-fast.b-cdn.net/metagochi/Metagochi_latest.pdf'
     },
     {
         url: Product3,
         name: 'verified contract',
-        link: 'https://metagochi.com/wp-content/uploads/2021/12/CTA-3-a.png'
+        link: 'https://etherscan.io/address/0xc1a85faa09c7f7247899f155439c5488b43e8429#code'
     },
 ]
 
