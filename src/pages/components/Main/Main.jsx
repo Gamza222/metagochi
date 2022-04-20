@@ -73,7 +73,7 @@ export default function Main() {
                 </a>
                 <div className={classes.main__container__info__video}>
                     <img src={VideoBg} alt="" />
-                    <video  src="https://metagochi.com/wp-content/uploads/2021/12/MetaGotchi-Promo-Video.mp4" controls conteolslist="nodownload" />
+                    <video  src="https://ipfs-fast.b-cdn.net/metagochi/MetaGotchi-Promo-Video.mp4" controls conteolslist="nodownload" />
                 </div>
                 <div className={classes.main__container__info__clouds}>
                     <img src={Clouds} alt='clouds' />
