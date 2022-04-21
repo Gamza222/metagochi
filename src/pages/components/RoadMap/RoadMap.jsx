@@ -20,7 +20,7 @@ const phases = [
         name: 'Phase 2',
         content: [
             'Implementation of aggressive social media marketing campaigns to raise awareness of NFT', 
-            'launch', 
+            'Launch', 
             'Listing on large portfolio trackers [CoinMarketCap & CoinGecko]',
             'Metagochi NFT launch',
         ],

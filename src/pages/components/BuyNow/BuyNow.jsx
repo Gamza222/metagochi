@@ -16,7 +16,7 @@ export default function BuyNow() {
           <h2>BUY NOW</h2>
           <p>Join the community</p>
           <div className="buynow__buttons">
-            <a href="https://app.uniswap.org/#/swap?outputCurrency=0xC1a85Faa09c7f7247899F155439c5488B43E8429" className="button"><img src={Pony} />BUY NOW ON INISWAP</a>
+            <a href="https://app.uniswap.org/#/swap?outputCurrency=0xC1a85Faa09c7f7247899F155439c5488B43E8429" className="button"><img src={Pony} />BUY NOW ON UNISWAP</a>
             <a href="https://t.me/metagochi" className="button"><img src={Telegram} />JOIN THE TELEGRAM</a>
           </div>
         </div>
