@@ -12,7 +12,6 @@ const phases = [
             'Listing on small & mid tier coin trackers [Coinhunt & CoinSniper]',
             'Initial influencer marketing campaign',
             'Advertisement campaigns', 
-            'Community focused competitions',
         ],
         pic: CheckPic,
     },
